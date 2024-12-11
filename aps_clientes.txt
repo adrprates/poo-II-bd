@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS public.aps_clientes
+(
+    aps_idcliente integer NOT NULL DEFAULT nextval('aps_clientes_aps_idcliente_seq'::regclass),
+    aps_nome character varying(80) COLLATE pg_catalog."default" NOT NULL,
+    aps_data_nascimento date NOT NULL,
+    aps_cpf character varying(80) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT aps_clientes_pkey PRIMARY KEY (aps_idcliente)
+)

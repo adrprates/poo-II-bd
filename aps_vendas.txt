@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS public.aps_vendas
+(
+    aps_idvenda integer NOT NULL DEFAULT nextval('aps_vendas_aps_idvenda_seq'::regclass),
+    aps_data_venda date NOT NULL,
+    aps_total_venda double precision NOT NULL,
+    aps_idcliente integer NOT NULL,
+    CONSTRAINT aps_vendas_pkey PRIMARY KEY (aps_idvenda),
+    CONSTRAINT aps_vendas_aps_idcliente_fkey FOREIGN KEY (aps_idcliente)
+        REFERENCES public.aps_clientes (aps_idcliente) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)

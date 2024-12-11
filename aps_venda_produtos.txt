@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS public.aps_venda_produtos
+(
+    aps_idvenda integer NOT NULL,
+    aps_idproduto integer NOT NULL,
+    aps_quantidade double precision NOT NULL,
+    aps_total_item double precision NOT NULL,
+    aps_desconto_item double precision NOT NULL,
+    CONSTRAINT aps_venda_produtos_pkey PRIMARY KEY (aps_idvenda, aps_idproduto),
+    CONSTRAINT aps_venda_produtos_aps_idvenda_fkey FOREIGN KEY (aps_idvenda)
+        REFERENCES public.aps_vendas (aps_idvenda) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+)

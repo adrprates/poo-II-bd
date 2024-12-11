@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS public.aps_produtos
+(
+    aps_idproduto integer NOT NULL DEFAULT nextval('aps_produtos_aps_idproduto_seq'::regclass),
+    aps_nome character varying(80) COLLATE pg_catalog."default" NOT NULL,
+    aps_marca character varying(80) COLLATE pg_catalog."default" NOT NULL,
+    aps_modelo character varying(80) COLLATE pg_catalog."default" NOT NULL,
+    aps_valor double precision NOT NULL,
+    CONSTRAINT aps_produtos_pkey PRIMARY KEY (aps_idproduto)
+)
