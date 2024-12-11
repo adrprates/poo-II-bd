@@ -1,7 +1,3 @@
-CREATE DATABASE bd_aps_vendas;
-
-\c bd_aps_vendas;
-
 CREATE SEQUENCE IF NOT EXISTS aps_clientes_aps_idcliente_seq START WITH 1 INCREMENT BY 1;
 
 CREATE TABLE IF NOT EXISTS public.aps_clientes (
